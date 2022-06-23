@@ -1,4 +1,4 @@
-http://example.com/2022/06/23/%E7%AC%AC%E4%BA%8C%E7%AF%87%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0/
-http://example.com/2022/06/23/%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0/
-http://example.com/2022/06/23/hello-world/
-http://example.com/
+https://songzetao.github.io/2022/06/23/%E7%AC%AC%E4%BA%8C%E7%AF%87%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0/
+https://songzetao.github.io/2022/06/23/%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0/
+https://songzetao.github.io/2022/06/23/hello-world/
+https://songzetao.github.io/
