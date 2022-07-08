@@ -6,7 +6,7 @@
   <link href="https://songzetao.github.io/atom.xml" rel="self"/>
   
   <link href="https://songzetao.github.io/"/>
-  <updated>2022-06-23T07:10:43.670Z</updated>
+  <updated>2022-07-08T06:40:20.387Z</updated>
   <id>https://songzetao.github.io/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title></title>
+    <link href="https://songzetao.github.io/2022/07/08/%E4%B8%80%E4%BA%9B%E5%91%BD%E4%BB%A4%E8%A1%8C%E6%95%B4%E7%90%86/"/>
+    <id>https://songzetao.github.io/2022/07/08/%E4%B8%80%E4%BA%9B%E5%91%BD%E4%BB%A4%E8%A1%8C%E6%95%B4%E7%90%86/</id>
+    <published>2022-07-08T06:36:03.399Z</published>
+    <updated>2022-07-08T06:40:20.387Z</updated>
+    
+    <content type="html"><![CDATA[<p>title:  一些命令行整理<br>date: 2022-07-08 14:39:26<br>tags: </p><table><thead><tr><th>git clone -b <code>branchname</code> url</th><th>克隆特定分支</th></tr></thead><tbody><tr><td>git add .</td><td>添加所有文件</td></tr><tr><td>wget url</td><td>下载</td></tr><tr><td>git status</td><td>查看 git 状态</td></tr><tr><td>git commit -m ‘commit message’</td><td>提交commit</td></tr><tr><td>git push -u <code>仓库名</code> <code>分支名</code></td><td>push代码</td></tr></tbody></table>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;title:  一些命令行整理&lt;br&gt;date: 2022-07-08 14:39:26&lt;br&gt;tags: &lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;git clone -b &lt;code&gt;branchname&lt;/code&gt; url&lt;/th&gt;
+&lt;th&gt;克隆特</summary>
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title></title>
