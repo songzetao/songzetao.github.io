@@ -6,7 +6,7 @@
   <link href="https://songzetao.github.io/atom.xml" rel="self"/>
   
   <link href="https://songzetao.github.io/"/>
-  <updated>2022-07-08T07:29:45.571Z</updated>
+  <updated>2022-07-08T07:31:19.392Z</updated>
   <id>https://songzetao.github.io/</id>
   
   <author>
@@ -18,10 +18,10 @@
   
   <entry>
     <title>一些命令行</title>
-    <link href="https://songzetao.github.io/2022/07/08/%E4%B8%80%E4%BA%9B%E5%91%BD%E4%BB%A4%E8%A1%8C%E6%95%B4%E7%90%86/"/>
-    <id>https://songzetao.github.io/2022/07/08/%E4%B8%80%E4%BA%9B%E5%91%BD%E4%BB%A4%E8%A1%8C%E6%95%B4%E7%90%86/</id>
+    <link href="https://songzetao.github.io/2022/07/08/%E4%B8%80%E4%BA%9B%E5%91%BD%E4%BB%A4%E8%A1%8C%E6%95%B4%E7%90%86title/"/>
+    <id>https://songzetao.github.io/2022/07/08/%E4%B8%80%E4%BA%9B%E5%91%BD%E4%BB%A4%E8%A1%8C%E6%95%B4%E7%90%86title/</id>
     <published>2022-07-08T06:39:26.000Z</published>
-    <updated>2022-07-08T07:29:45.571Z</updated>
+    <updated>2022-07-08T07:31:19.392Z</updated>
     
     <content type="html"><![CDATA[<table><thead><tr><th>git clone -b <code>branchname</code> url</th><th>克隆特定分支</th></tr></thead><tbody><tr><td>git add .</td><td>添加所有文件</td></tr><tr><td>wget url</td><td>下载</td></tr><tr><td>git status</td><td>查看 git 状态</td></tr><tr><td>git commit -m ‘commit message’</td><td>提交commit</td></tr><tr><td>git push -u <code>仓库名</code> <code>分支名</code></td><td>push代码</td></tr><tr><td>git remote get-url –all origin</td><td>查看remote的url</td></tr></tbody></table>]]></content>
     
