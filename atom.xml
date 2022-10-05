@@ -6,7 +6,7 @@
   <link href="https://songzetao.github.io/atom.xml" rel="self"/>
   
   <link href="https://songzetao.github.io/"/>
-  <updated>2022-10-05T13:12:05.630Z</updated>
+  <updated>2022-10-05T13:54:06.304Z</updated>
   <id>https://songzetao.github.io/</id>
   
   <author>
@@ -17,11 +17,35 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>图床工具</title>
+    <link href="https://songzetao.github.io/2022/10/05/%E5%9B%BE%E5%BA%8A%E5%B7%A5%E5%85%B7/"/>
+    <id>https://songzetao.github.io/2022/10/05/%E5%9B%BE%E5%BA%8A%E5%B7%A5%E5%85%B7/</id>
+    <published>2022-10-05T13:29:59.000Z</published>
+    <updated>2022-10-05T13:54:06.304Z</updated>
+    
+    <content type="html"><![CDATA[<p>在 markdown 中引入本地图片后，把文章传到互联网上后图片会失效。使用图床工具是非常好的一个解决方案，可以做到将文章中的图片放到图床平台进行统一管理。</p><p>在部署图床的过程中出现了一些困难，有了一些取舍。</p><p>一般来说，使用图床需要一个前端软件，负责将图片进行上传，一个后端软件，负责将图片进行托管。</p><p>通过一阵摸索，主要选择了picgo + sm.ms 方式进行图床的搭建。</p><p>通过这套方案，可以非常优雅的实现图床管理。使用命令</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">ctrl + q # 截图 </span><br><span class="line">ctrl + w # 上传图床</span><br><span class="line">ctrl + v # 粘贴链接</span><br></pre></td></tr></table></figure><p>一气呵成文档图片的管理。<br><img src="https://s2.loli.net/2022/10/05/7VKplowmRB3QcyL.png"></p><p>缺点是 sm.ms 有容量的限制，需要开会员，等 gitee 或者 github 好用了争取换回他们做存储。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;在 markdown 中引入本地图片后，把文章传到互联网上后图片会失效。使用图床工具是非常好的一个解决方案，可以做到将文章中的图片放到图床平台进行统一管理。&lt;/p&gt;
+&lt;p&gt;在部署图床的过程中出现了一些困难，有了一些取舍。&lt;/p&gt;
+&lt;p&gt;一般来说，使用图床需要一个前端软件，负</summary>
+      
+    
+    
+    
+    <category term="tools" scheme="https://songzetao.github.io/categories/tools/"/>
+    
+    
+  </entry>
+  
+  <entry>
     <title>整理一些命令行</title>
     <link href="https://songzetao.github.io/2022/10/05/%E6%95%B4%E7%90%86%E4%B8%80%E4%BA%9B%E5%91%BD%E4%BB%A4%E8%A1%8C/"/>
     <id>https://songzetao.github.io/2022/10/05/%E6%95%B4%E7%90%86%E4%B8%80%E4%BA%9B%E5%91%BD%E4%BB%A4%E8%A1%8C/</id>
     <published>2022-10-05T13:08:11.000Z</published>
-    <updated>2022-10-05T13:12:05.630Z</updated>
+    <updated>2022-10-05T13:29:30.235Z</updated>
     
     <content type="html"><![CDATA[<p>在写代码过程中，总会用到一些指令，用的少了就容易遗忘，所以就简单记录一下。</p><table><thead><tr><th>命令行</th><th>说明</th></tr></thead><tbody><tr><td>git clone -b <code>branchname</code> url</td><td>克隆特定分支</td></tr><tr><td>git add .</td><td>添加所有文件</td></tr><tr><td>wget url</td><td>下载</td></tr><tr><td>git status</td><td>查看 git 状态</td></tr><tr><td>git commit -m ‘commit message’</td><td>提交commit</td></tr><tr><td>git push -u <code>仓库名</code> <code>分支名</code></td><td>push代码</td></tr><tr><td>git remote get-url –all origin</td><td>查看remote的url</td></tr></tbody></table>]]></content>
     
