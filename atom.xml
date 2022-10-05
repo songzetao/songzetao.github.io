@@ -6,7 +6,7 @@
   <link href="https://songzetao.github.io/atom.xml" rel="self"/>
   
   <link href="https://songzetao.github.io/"/>
-  <updated>2022-10-05T13:54:33.009Z</updated>
+  <updated>2022-10-05T14:04:28.705Z</updated>
   <id>https://songzetao.github.io/</id>
   
   <author>
@@ -21,17 +21,12 @@
     <link href="https://songzetao.github.io/2022/10/05/%E5%9B%BE%E5%BA%8A%E5%B7%A5%E5%85%B7/"/>
     <id>https://songzetao.github.io/2022/10/05/%E5%9B%BE%E5%BA%8A%E5%B7%A5%E5%85%B7/</id>
     <published>2022-10-05T13:29:59.000Z</published>
-    <updated>2022-10-05T13:54:33.009Z</updated>
+    <updated>2022-10-05T14:04:28.705Z</updated>
     
-    <content type="html"><![CDATA[<p>在 markdown 中引入本地图片后，把文章传到互联网上后图片会失效。使用图床工具是非常好的一个解决方案，可以做到将文章中的图片放到图床平台进行统一管理。</p><p>在部署图床的过程中出现了一些困难，有了一些取舍。</p><p>一般来说，使用图床需要一个前端软件，负责将图片进行上传，一个后端软件，负责将图片进行托管。</p><p>通过一阵摸索，主要选择了picgo + <a href="https://sm.ms/">sm.ms</a> 方式进行图床的搭建。</p><p>通过这套方案，可以非常优雅的实现图床管理。使用命令</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">ctrl + q # 截图 </span><br><span class="line">ctrl + w # 上传图床</span><br><span class="line">ctrl + v # 粘贴链接</span><br></pre></td></tr></table></figure><p>一气呵成文档图片的管理。<br><img src="https://s2.loli.net/2022/10/05/7VKplowmRB3QcyL.png"></p><p>缺点是 sm.ms 有容量的限制，需要开会员，等 gitee 或者 github 好用了争取换回他们做存储。</p>]]></content>
+    <content type="html"><![CDATA[<p>在 markdown 中引入本地图片后，把文章传到互联网上后图片会失效。使用图床工具是非常好的一个解决方案，可以做到将文章中的图片放到图床平台进行统一管理。</p><span id="more"></span><p>在部署图床的过程中出现了一些困难，有了一些取舍。</p><p>一般来说，使用图床需要一个前端软件，负责将图片进行上传，一个后端软件，负责将图片进行托管。</p><p>通过一阵摸索，主要选择了picgo + <a href="https://sm.ms/">sm.ms</a> 方式进行图床的搭建。</p><p>通过这套方案，可以非常优雅的实现图床管理。使用命令</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">ctrl + q # 截图 </span><br><span class="line">ctrl + w # 上传图床</span><br><span class="line">ctrl + v # 粘贴链接</span><br></pre></td></tr></table></figure><p>一气呵成文档图片的管理。<br><img src="https://s2.loli.net/2022/10/05/7VKplowmRB3QcyL.png"></p><p>缺点是 sm.ms 有容量的限制，需要开会员，等 gitee 或者 github 好用了争取换回他们做存储。</p>]]></content>
     
     
-      
-      
-    <summary type="html">&lt;p&gt;在 markdown 中引入本地图片后，把文章传到互联网上后图片会失效。使用图床工具是非常好的一个解决方案，可以做到将文章中的图片放到图床平台进行统一管理。&lt;/p&gt;
-&lt;p&gt;在部署图床的过程中出现了一些困难，有了一些取舍。&lt;/p&gt;
-&lt;p&gt;一般来说，使用图床需要一个前端软件，负</summary>
-      
+    <summary type="html">&lt;p&gt;在 markdown 中引入本地图片后，把文章传到互联网上后图片会失效。使用图床工具是非常好的一个解决方案，可以做到将文章中的图片放到图床平台进行统一管理。&lt;/p&gt;</summary>
     
     
     
