@@ -1,8 +1,8 @@
-https://songzetao.github.io/unpost/%E4%B8%80%E4%BA%9B%E5%91%BD%E4%BB%A4%E8%A1%8C%E6%95%B4%E7%90%86title.html
 https://songzetao.github.io/2022/10/05/%E6%95%B4%E7%90%86%E4%B8%80%E4%BA%9B%E5%91%BD%E4%BB%A4%E8%A1%8C/
+https://songzetao.github.io/unpost/%E4%B8%80%E4%BA%9B%E5%91%BD%E4%BB%A4%E8%A1%8C%E6%95%B4%E7%90%86title.html
 https://songzetao.github.io/unpost/2022-10-05-test.html
 https://songzetao.github.io/unpost/%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0.html
 https://songzetao.github.io/unpost/%E7%AC%AC%E4%B8%89%E7%AF%87%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0.html
 https://songzetao.github.io/unpost/hello-world.html
 https://songzetao.github.io/
-https://songzetao.github.io/tags/command-line/
+https://songzetao.github.io/categories/command-line/
