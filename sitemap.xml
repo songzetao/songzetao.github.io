@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://songzetao.github.io/2022/07/08/%E4%B8%80%E4%BA%9B%E5%91%BD%E4%BB%A4%E8%A1%8C%E6%95%B4%E7%90%86title/</loc>
+    <loc>https://songzetao.github.io/unpost/%E4%B8%80%E4%BA%9B%E5%91%BD%E4%BB%A4%E8%A1%8C%E6%95%B4%E7%90%86title.html</loc>
     
     <lastmod>2022-10-05</lastmod>
     
@@ -11,7 +11,7 @@
   </url>
   
   <url>
-    <loc>https://songzetao.github.io/2022/10/05/test/</loc>
+    <loc>https://songzetao.github.io/2022/10/05/%E6%95%B4%E7%90%86%E4%B8%80%E4%BA%9B%E5%91%BD%E4%BB%A4%E8%A1%8C/</loc>
     
     <lastmod>2022-10-05</lastmod>
     
@@ -20,7 +20,16 @@
   </url>
   
   <url>
-    <loc>https://songzetao.github.io/2022/06/23/%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0/</loc>
+    <loc>https://songzetao.github.io/unpost/2022-10-05-test.html</loc>
+    
+    <lastmod>2022-10-05</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://songzetao.github.io/unpost/%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0.html</loc>
     
     <lastmod>2022-07-08</lastmod>
     
@@ -29,7 +38,7 @@
   </url>
   
   <url>
-    <loc>https://songzetao.github.io/2022/06/13/%E7%AC%AC%E4%B8%89%E7%AF%87%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0/</loc>
+    <loc>https://songzetao.github.io/unpost/%E7%AC%AC%E4%B8%89%E7%AF%87%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0.html</loc>
     
     <lastmod>2022-06-23</lastmod>
     

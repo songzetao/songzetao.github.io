@@ -6,7 +6,7 @@
   <link href="https://songzetao.github.io/atom.xml" rel="self"/>
   
   <link href="https://songzetao.github.io/"/>
-  <updated>2022-10-05T12:46:27.949Z</updated>
+  <updated>2022-10-05T13:08:36.765Z</updated>
   <id>https://songzetao.github.io/</id>
   
   <author>
@@ -17,24 +17,11 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>test</title>
-    <link href="https://songzetao.github.io/2022/10/05/test/"/>
-    <id>https://songzetao.github.io/2022/10/05/test/</id>
-    <published>2022-10-05T12:46:17.000Z</published>
-    <updated>2022-10-05T12:46:27.949Z</updated>
-    
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>记录一些命令行</title>
-    <link href="https://songzetao.github.io/2022/07/08/%E4%B8%80%E4%BA%9B%E5%91%BD%E4%BB%A4%E8%A1%8C%E6%95%B4%E7%90%86title/"/>
-    <id>https://songzetao.github.io/2022/07/08/%E4%B8%80%E4%BA%9B%E5%91%BD%E4%BB%A4%E8%A1%8C%E6%95%B4%E7%90%86title/</id>
-    <published>2022-07-08T06:39:26.000Z</published>
-    <updated>2022-10-05T13:04:48.717Z</updated>
+    <title>整理一些命令行</title>
+    <link href="https://songzetao.github.io/2022/10/05/%E6%95%B4%E7%90%86%E4%B8%80%E4%BA%9B%E5%91%BD%E4%BB%A4%E8%A1%8C/"/>
+    <id>https://songzetao.github.io/2022/10/05/%E6%95%B4%E7%90%86%E4%B8%80%E4%BA%9B%E5%91%BD%E4%BB%A4%E8%A1%8C/</id>
+    <published>2022-10-05T13:08:11.000Z</published>
+    <updated>2022-10-05T13:08:36.765Z</updated>
     
     <content type="html"><![CDATA[<p>在写代码过程中，总会用到一些指令，用的少了就容易遗忘，所以就简单记录一下。</p><table><thead><tr><th>命令行</th><th>说明</th></tr></thead><tbody><tr><td>git clone -b <code>branchname</code> url</td><td>克隆特定分支</td></tr><tr><td>git add .</td><td>添加所有文件</td></tr><tr><td>wget url</td><td>下载</td></tr><tr><td>git status</td><td>查看 git 状态</td></tr><tr><td>git commit -m ‘commit message’</td><td>提交commit</td></tr><tr><td>git push -u <code>仓库名</code> <code>分支名</code></td><td>push代码</td></tr><tr><td>git remote get-url –all origin</td><td>查看remote的url</td></tr></tbody></table>]]></content>
     
@@ -57,48 +44,6 @@
     
     
     <category term="command line" scheme="https://songzetao.github.io/tags/command-line/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>第一篇博客文章</title>
-    <link href="https://songzetao.github.io/2022/06/23/%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0/"/>
-    <id>https://songzetao.github.io/2022/06/23/%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0/</id>
-    <published>2022-06-23T06:41:19.000Z</published>
-    <updated>2022-07-08T07:26:31.000Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="三级标题"><a href="#三级标题" class="headerlink" title="三级标题"></a>三级标题</h3><p>内容</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h3 id=&quot;三级标题&quot;&gt;&lt;a href=&quot;#三级标题&quot; class=&quot;headerlink&quot; title=&quot;三级标题&quot;&gt;&lt;/a&gt;三级标题&lt;/h3&gt;&lt;p&gt;内容&lt;/p&gt;
-</summary>
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>第三篇博客文章</title>
-    <link href="https://songzetao.github.io/2022/06/13/%E7%AC%AC%E4%B8%89%E7%AF%87%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0/"/>
-    <id>https://songzetao.github.io/2022/06/13/%E7%AC%AC%E4%B8%89%E7%AF%87%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0/</id>
-    <published>2022-06-13T14:41:19.000Z</published>
-    <updated>2022-06-23T14:48:30.000Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="三级标题"><a href="#三级标题" class="headerlink" title="三级标题"></a>三级标题</h3><p>内容</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h3 id=&quot;三级标题&quot;&gt;&lt;a href=&quot;#三级标题&quot; class=&quot;headerlink&quot; title=&quot;三级标题&quot;&gt;&lt;/a&gt;三级标题&lt;/h3&gt;&lt;p&gt;内容&lt;/p&gt;
-</summary>
-      
-    
-    
-    
     
   </entry>
   
