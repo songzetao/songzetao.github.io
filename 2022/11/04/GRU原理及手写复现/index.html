@@ -16,7 +16,7 @@
 <meta property="og:description" content="看了b站大神deep_thoughts的Pytorch教程，学习了RNN和LSTM的教程，在学习GRU时，想着能不能自己复现一下，尝试后将代码放出来。">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2022-11-04T13:32:49.000Z">
-<meta property="article:modified_time" content="2022-11-08T14:27:18.039Z">
+<meta property="article:modified_time" content="2022-11-08T14:28:40.040Z">
 <meta property="article:author" content="Song Zetao">
 <meta name="twitter:card" content="summary">
   
@@ -182,7 +182,7 @@
 <p>$r_{t}&#x3D;\sigma\left(W_{i r} x_{t}+b_{i r}+W_{h r} h_{(t-1)}+b_{h r}\right)$ </p>
 <p>$z_{t}&#x3D;\sigma\left(W_{i z} x_{t}+b_{i z}+W_{h z} h_{(t-1)}+b_{h z}\right) $</p>
 <p>$n_{t}&#x3D;\tanh \left(W_{i n} x_{t}+b_{i n}+r_{t} *\left(W_{h n} h_{(t-1)}+b_{h n}\right)\right) $</p>
-<p>$h_{t}&#x3D;\left(1-z_{t}\right) * n_{t}+z_{t} * h_{(t-1)}$$</p>
+<p>$h_{t}&#x3D;\left(1-z_{t}\right) * n_{t}+z_{t} * h_{(t-1)}$</p>
 <p>在公式的实现过程中，需要注意的为：</p>
 <ol>
 <li>PyTorch已经将RNN、LSTM、GRU相关的代码写到了C语言中，为了计算更加快速。</li>
