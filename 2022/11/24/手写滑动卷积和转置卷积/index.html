@@ -8,15 +8,15 @@
   <link rel="dns-prefetch" href="https://songzetao.github.io">
   <title>手写滑动卷积和转置卷积 | songzetao&#39;s blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="卷积 convolution 元素 input size kernel size stride padding group dilation   计算方法 F.conv2d(input, kernel, ……) 以类的形式或者以函数的形式 对input展开+矩阵相乘 torch.Unflod 手写分块   对kernel展开+矩阵相乘，所以引出了转置卷积的原理，对kernel矩阵进行转置，以实现">
+  <meta name="description" content="卷积 convolution 元素 input size kernel size stride padding group dilation">
 <meta property="og:type" content="article">
 <meta property="og:title" content="手写滑动卷积和转置卷积">
 <meta property="og:url" content="https://songzetao.github.io/2022/11/24/%E6%89%8B%E5%86%99%E6%BB%91%E5%8A%A8%E5%8D%B7%E7%A7%AF%E5%92%8C%E8%BD%AC%E7%BD%AE%E5%8D%B7%E7%A7%AF/index.html">
 <meta property="og:site_name" content="songzetao&#39;s blog">
-<meta property="og:description" content="卷积 convolution 元素 input size kernel size stride padding group dilation   计算方法 F.conv2d(input, kernel, ……) 以类的形式或者以函数的形式 对input展开+矩阵相乘 torch.Unflod 手写分块   对kernel展开+矩阵相乘，所以引出了转置卷积的原理，对kernel矩阵进行转置，以实现">
+<meta property="og:description" content="卷积 convolution 元素 input size kernel size stride padding group dilation">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2022-11-24T06:30:33.000Z">
-<meta property="article:modified_time" content="2022-11-24T06:35:44.509Z">
+<meta property="article:modified_time" content="2022-11-24T06:39:15.067Z">
 <meta property="article:author" content="Song Zetao">
 <meta name="twitter:card" content="summary">
   
@@ -185,7 +185,7 @@
 <li>stride</li>
 <li>padding</li>
 <li>group</li>
-<li>dilation</li>
+<li>dilation<span id="more"></span></li>
 </ul>
 </li>
 <li>计算方法<ul>
