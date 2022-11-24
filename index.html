@@ -154,6 +154,112 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-手写滑动卷积和转置卷积" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2022/11/24/%E6%89%8B%E5%86%99%E6%BB%91%E5%8A%A8%E5%8D%B7%E7%A7%AF%E5%92%8C%E8%BD%AC%E7%BD%AE%E5%8D%B7%E7%A7%AF/">手写滑动卷积和转置卷积</a>
+    </h1>
+  
+
+        
+        <a href="/2022/11/24/%E6%89%8B%E5%86%99%E6%BB%91%E5%8A%A8%E5%8D%B7%E7%A7%AF%E5%92%8C%E8%BD%AC%E7%BD%AE%E5%8D%B7%E7%A7%AF/" class="archive-article-date">
+  	<time datetime="2022-11-24T06:30:33.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-11-24</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <ul>
+<li>卷积<ul>
+<li>convolution<ul>
+<li>元素<ul>
+<li>input size</li>
+<li>kernel size</li>
+<li>stride</li>
+<li>padding</li>
+<li>group</li>
+<li>dilation</li>
+</ul>
+</li>
+<li>计算方法<ul>
+<li>F.conv2d(input, kernel, ……) 以类的形式或者以函数的形式</li>
+<li>对input展开+矩阵相乘<ul>
+<li>torch.Unflod</li>
+<li>手写分块</li>
+</ul>
+</li>
+<li>对kernel展开+矩阵相乘，所以引出了转置卷积的原理，对kernel矩阵进行转置，以实现上采样</li>
+</ul>
+</li>
+<li>用途</li>
+<li>卷积与互相关</li>
+</ul>
+</li>
+<li>transpose convolution<ul>
+<li>计算方法<ul>
+<li>F.conv_transpose2d(input, kernel, …)</li>
+<li>对kernel矩阵转置+矩阵相乘</li>
+</ul>
+</li>
+<li>特定<ul>
+<li>上采样</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>以上为卷积的思维导图。<br>下面为利用矩阵运算来实现原始的二维卷积。其中input的shape为：[batch_size, in_channels, input_h, input_w]</p>
+<p>如果输入为三个维度，会自动在第一个维度广播为四维的tensor。</p>
+<p>卷积的参数为一个四维的tensor，分别为：[out_channels, in_channels, kernel_h, kernel_w]</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># step3:用原始的矩阵运算来实现二维卷积，考虑batchsize和channel维度</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">matrix_multiplication_for_conv2d_full</span>(<span class="params"><span class="built_in">input</span>, kernel, bias=<span class="number">0</span>, stride=<span class="number">1</span>, padding=<span class="number">0</span></span>):</span><br><span class="line">    <span class="keyword">if</span> padding &gt; <span class="number">0</span>:</span><br><span class="line">        <span class="comment"># 对左右上下进行pad</span></span><br><span class="line">        <span class="built_in">input</span> = F.pad(<span class="built_in">input</span>, (padding, padding, padding, padding, <span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>))</span><br><span class="line">    batch_size, in_channels, input_h, input_w = <span class="built_in">input</span>.shape</span><br><span class="line">    out_channels, in_channels, kernel_h, kernel_w = kernel.shape</span><br><span class="line">    </span><br><span class="line">    output_h = math.floor((input_h - kernel_h) / stride + <span class="number">1</span>) <span class="comment"># 卷积输出的高度</span></span><br><span class="line">    output_w = math.floor((input_w - kernel_w) / stride + <span class="number">1</span>) <span class="comment"># 卷积输出的宽度</span></span><br><span class="line">    output = torch.zeros(batch_size, out_channels, output_h, output_w)</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 效率问题次要关注</span></span><br><span class="line">    <span class="keyword">for</span> bs <span class="keyword">in</span> <span class="built_in">range</span>(batch_size):</span><br><span class="line">        <span class="keyword">for</span> oc <span class="keyword">in</span> <span class="built_in">range</span>(out_channels):</span><br><span class="line">            <span class="keyword">for</span> ic <span class="keyword">in</span> <span class="built_in">range</span>(in_channels):</span><br><span class="line">                <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">0</span>, input_h-kernel_h+<span class="number">1</span>, stride): <span class="comment"># 对高度维进行遍历</span></span><br><span class="line">                    <span class="keyword">for</span> j <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">0</span>, input_w-kernel_w+<span class="number">1</span>, stride): <span class="comment"># 对宽度维进行遍历</span></span><br><span class="line">                        region = <span class="built_in">input</span>[bs, ic, i: i + kernel_h, j: j + kernel_w] <span class="comment"># 去除被卷积核滑动过的区域</span></span><br><span class="line">                        output[bs, oc, <span class="built_in">int</span>(i / stride), <span class="built_in">int</span>(j / stride)] += torch.<span class="built_in">sum</span>(region * kernel[oc, ic, :, :]) + bias <span class="comment"># 进行卷积</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> output</span><br><span class="line"></span><br><span class="line">batch_size = <span class="number">2</span></span><br><span class="line">in_channels = <span class="number">2</span></span><br><span class="line">out_channels = <span class="number">1</span></span><br><span class="line"><span class="built_in">input</span> = torch.randn(batch_size, in_channels, <span class="number">5</span>, <span class="number">5</span>)</span><br><span class="line">kernel = torch.randn(out_channels, in_channels, <span class="number">3</span>, <span class="number">3</span>)</span><br><span class="line"></span><br><span class="line">conv_2d_output = F.conv2d(<span class="built_in">input</span>, kernel) <span class="comment"># 使用pytorch官方api调用验证结果</span></span><br><span class="line">custom_conv_2d_output_full = matrix_multiplication_for_conv2d_full(<span class="built_in">input</span>, kernel)</span><br><span class="line"><span class="comment"># print(conv_2d_output)</span></span><br><span class="line"><span class="comment"># print(custom_conv_2d_output_full)</span></span><br><span class="line">torch.allclose(conv_2d_output, custom_conv_2d_output_full)</span><br><span class="line"></span><br><span class="line"><span class="comment"># <span class="doctag">TODO:</span>torch.isclose和torch.allclose的区别和联系，大概意思懂了</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2022/11/24/%E6%89%8B%E5%86%99%E6%BB%91%E5%8A%A8%E5%8D%B7%E7%A7%AF%E5%92%8C%E8%BD%AC%E7%BD%AE%E5%8D%B7%E7%A7%AF/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-关于我觉得现有的异地恋共同看电影软件不好用想自己写一个却将其写成病毒软件这件事" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
